@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <h1>calculator main page</h1>
-    {%if error %}
-      <h1 style="color:red">{{error}}</h1>
-      {% endif %}
+    <h1>Calcultor Main Page</h1>
+    {% if error %}
+    <h1 style="color: red">{{error}}</h1>
+    {% endif %}
     <form method="post">
         {% csrf_token %}
     <label for="Num1">Enter number 1:</label>
-    <input type="text" name="Num1" placeholder="enter number 1" required><br><br>
-    <label for="Num1">Enter number 2:</label>
-    <input type="text" name="Num2" placeholder="enter number 2" required><br><br>
-    <label for="op">Enter operation:</label>
-    <input type="text" name="op" placeholder="enter operation" required><br><br>
-    <button type="submit">submit</button>
+    <input type="text" name="Num1" placeholder="Enter number 1:" required><br><br>
+    <label for="Num2">Enter number 2:</label>
+    <input type="text" name="Num2" placeholder="Enter number 2:" required><br><br>
+    <label for="Op">Enter Operation:</label>
+    <input type="text" name="Op" placeholder="Enter Operation" required><br><br>
+    <button type = "submit">submit</button>
     </form>
-    {%if result %}
-      <h1>result: {{result}}</h1>
-      {% endif %}
+
+    {% if result %}
+    <h1>result: {{result}}</h1>
+    {% endif %}
+    <a href="{% url "home" %}"> Back to Calculator</a>
 </body>
 </html>
-
-    
