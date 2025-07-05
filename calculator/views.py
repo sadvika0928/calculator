@@ -24,4 +24,4 @@ def home(request):
         return redirect('hello',result)
     return render(request,'home.html')
 def hello(request,result):
-    return render(request,'result.html'{'result':'result'})
+    return render(request,'result.html',{'result':'result'})
